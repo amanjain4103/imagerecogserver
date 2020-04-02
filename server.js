@@ -45,18 +45,9 @@ app.put('/image', (req,res) => { Image.handleImage(req,res,db) })
 
 
 
-app.listen(3000,()=>{
+app.listen(process.env.PORT ||3000,()=>{
     console.log("app is running");
 })
 
 
 
-
-/*
-/ --> this is working 
-/signin --> POST = success/fail
-/register --> POST =  user
-/profile/:userid --> GET user
-/image --> PUT --> update user info
-
-*/
